@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">demo</string>
+    <string name="notification_permission_toast">需要通知权限以启动VDP服务</string>
+    <string name="note">数据路径：/sdcard/Android/data/com.oplus.vdc/cache\n\n
+        "虚拟扬声器：系统将发送正弦波PCM数据给VDP\n"
+        "虚拟麦克风：系统将接收VDP数据，保存到fake_mic.pcm\n"
+        "虚拟摄像头：系统将接收VDP数据，保存到fake_camera.h264\n"
+        "\n使用adb pull可将数据取出"
+    </string>
+</resources>
