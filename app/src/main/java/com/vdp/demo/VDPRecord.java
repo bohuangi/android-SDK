@@ -29,7 +29,7 @@ public class VDPRecord {
         sampleRate = 16000;               //audioFormat.getSampleRate(); // 采样率
         channelCount = 2;                 //audioFormat.getChannelCount();   // 声道数
         samplebytes = 2;       //采样位数
-        FRAME_SIZE = (int) (sampleRate / 1000.0 * 20.0);   //每帧每声道采样数
+        FRAME_SIZE = (int) (sampleRate / 1000 * 20);   //每帧每声道采样数
         frame_bytes = (int) (FRAME_SIZE * channelCount * samplebytes); //每帧字节数
 
         client_s = new Socket_Client(ipv4);
@@ -95,8 +95,8 @@ public class VDPRecord {
         int decoded = opusDecoder.decode(rx_buffer2, outBuf, FRAME_SIZE);
         Log.e("opus_decoded", "decoded " + decoded + " bytes");
 
-        byte[] outBuf2=new byte[decoded];
-        System.arraycopy(outBuf, 0, outBuf2, 0, decoded);
+        byte[] outBuf2=new byte[decoded* channelCount * samplebytes];
+        System.arraycopy(outBuf, 0, outBuf2, 0, outBuf2.length);
         Log.e("arraycopy", "arraycopy after");
 
 
