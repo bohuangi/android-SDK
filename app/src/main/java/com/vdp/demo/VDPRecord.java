@@ -18,7 +18,7 @@ public class VDPRecord {
     private int frame_bytes;//每帧字节数
 
 
-    private OpusDecoder opusDecoder;//编码器
+    private OpusDecoder opusDecoder;//解码器
 
 
     public VDPRecord(){}
