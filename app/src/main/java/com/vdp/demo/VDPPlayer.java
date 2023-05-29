@@ -98,8 +98,7 @@ public class VDPPlayer {
         int bufferlen = -1;
 
 
-        OpusDecoder decoder = new OpusDecoder();
-        decoder.close();
+
 
         try {
             bufferlen = inputStream.read(buffer, 0, bufferSize);//管道的数据写入buffer
